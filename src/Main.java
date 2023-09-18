@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 //        classe objeto = construtor
     Turista mochileiro = new Turista("Lindsay");
-    Turista mochileira = new Turista("");
+    Turista mochileira = new Turista();
 
     mochileiro.setCpf(Validacao.cpf("123"));
     mochileira.setNome("Namor");
@@ -13,5 +13,10 @@ public class Main {
     String retorno = mochileira.viajar();
         JOptionPane.showMessageDialog(null,retorno);
 
+      String nome = JOptionPane.showInputDialog("Entre com o nome da pessoa Turista:");
+
+      Turista pessoaTurista = new Turista(nome);
+
+      System.out.println(pessoaTurista.getNome());
     }
 }

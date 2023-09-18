@@ -7,7 +7,11 @@ public class Turista {
     Turista(){}
     Turista(String _nome){
         this.nome = _nome;
+    }
 
+    Turista(String _nome, String _cpf){
+        this.nome = _nome;
+        this.cpf = _cpf;
     }
     public String viajar(){
         return "viajou!!";
