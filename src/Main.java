@@ -6,7 +6,7 @@ public class Main {
     Turista mochileiro = new Turista("Lindsay");
     Turista mochileira = new Turista();
 
-    mochileiro.setCpf(Validacao.cpf("123"));
+    mochileiro.setCpf(Validacao.cpf());
     mochileira.setNome("Namor");
     mochileira.setCpf("456");
 
@@ -21,7 +21,12 @@ public class Main {
 
       String cpf = JOptionPane.showInputDialog("Entre com o cpf:");
 
-      pessoaTurista.setCpf(cpf);
-      System.out.println(pessoaTurista.getCpf());
+      if (Validacao.cpf(cpf)) {
+          pessoaTurista.setCpf(cpf);
+          System.out.println(pessoaTurista.getCpf());
+      }
+      else{
+          System.out.println("CPF invalido");
+      }
     }
 }
